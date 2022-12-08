@@ -30,7 +30,7 @@ void testAccurency(int nb){
   int colorMat[6] = {0,0,0,0,0,0};
   int total = 0;
   int best = 10000;
-  int pire = 0;
+  int worst = 0;
 
   for (int i = 0; i < nb; i++) {
 
@@ -67,8 +67,8 @@ void testAccurency(int nb){
       best = solution -> lenResUser;
     }
 
-    if(solution -> lenResUser > pire){
-      pire = solution -> lenResUser;
+    if(solution -> lenResUser > worst){
+      worst = solution -> lenResUser;
     }
 
 
@@ -82,7 +82,7 @@ void testAccurency(int nb){
   printf("Rubiks cube résolu : %i\n",nb );
   printf("Moyenne de coût : %i\n",total/nb );
   printf("Meilleur résolution : %i\n",best );
-  printf("Plus mauvaise résolution : %i\n",pire );
+  printf("Plus mauvaise résolution : %i\n",worst );
 
 
 
